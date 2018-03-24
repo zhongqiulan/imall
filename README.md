@@ -13,6 +13,8 @@ git clone git@github.com:zhongqiulan/manmanbuy.git
 4.文件目录结构
  <img src="./images/目录格式.png" alt="">
 5.git add .
+6.git commit -m "修改了git -byzql"
+备注：请大家多写备注啊，并且加上名字的拼音首字母
 6.git remote add origin git@github.com:zhongqiulan/manmanbuy.git
 7.git push -u origin master
 ###最后大家记得无论什么时候提交代码
