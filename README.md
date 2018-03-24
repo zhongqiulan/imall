@@ -15,6 +15,9 @@ git clone git@github.com:zhongqiulan/manmanbuy.git
 5.git add .
 6.git remote add origin git@github.com:zhongqiulan/manmanbuy.git
 7.git push -u origin master
-###最后大家记得每天早上
+###最后大家记得无论什么时候提交代码
+
+###先git pull再git push
+
 git pull
 git push 
