@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1.添加移动端的视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买---手机端</title>
+    <!-- 2.引入站点图标 -->
+    <!-- <link rel="icon" href="./images/favicon.ico"> -->
+    <!-- 1.引包先引入第三方的包  如果有依赖要先引入依赖在引入不依赖 -->
+    <!-- 样式在head里面引入 -->
+    <!-- 1.引入字体图标的样式文件 -->
+    <!-- 2.引人mui的样式文件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/save-money.css">
+</head>
+
+<body>
+    <!--先把页面的大结构划分好，每个大块最外层选择器尽量id选择器 id样式优先级高 方便覆盖一些框架的样式 可以更明显的区分代码的功能块  -->
+    <!-- 头部 -->
+    <header id="header">
+        <a href="http://m.manmanbuy.com/" class="">
+
+        </a>
+        <h1>省钱控-最新优惠</h1>
+        <div class="home">
+            <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+        </div>
+    </header>
+    <!-- 主体部分 -->
+    <main id="main">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+
+                    <img class="mui-media-object mui-pull-left" src="http://img2017.manmanbuy.com/Thumb_201803001037508104.png">
+
+                    <div class="info">
+                        <div class="mui-media-body title">
+                            0点：adidas 阿迪达斯 BK3718 男子针织夹克                            <span class="price">180元包邮</span>
+                        </div>
+                        <div class="mui-media-body other">
+                            <span class="small">天猫旗舰店 | 03-25 10:37</span>
+                            <span class="comment">
+                                <i class="icon-comment"></i>
+                                0
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <!-- 分页的结构 -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+    </main>
+    <!-- 底部 -->
+    <footer id="footer">
+
+    </footer>
+
+    <!-- 创建商品列表的模板 -->
+    <script type="text/html" id="productListTmp">
+        {{each result as value i}}
+        <li class="mui-table-view-cell mui-media">
+            <a>
+                {{#value.productImgSm}}
+                <div class="info">
+                    <div class="mui-media-body title">
+                        {{value.productName}}
+                        <p class='mui-ellipsis'>{{value.productPinkage}}</p>
+                    </div>
+                    <div class="other">
+                        <span class="small">{{value.productTime}}</span>
+                        <span class="comment">
+                            <i class="icon-comment"></i>
+                            {{#value.productComCount}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 创建分页模板 -->
+    <script type="text/html" id = "pageTmp">
+        <!-- 上一页的li -->
+        <li>
+                <a href="#" aria-label="Previous" class="prev-page" data-prev-page="{{page--}}">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+           
+            {{each result as value i}}
+            <li class="{{i == page ? 'active' : ''}}">
+                <a href="#" class="page" data-page="{{value}}">{{value}}</a>
+            </li>
+            {{/each}}
+            <!-- 下一页的li -->
+            <li>
+                    <a href="#" aria-label="Next" class="next-page"  data-next-page="{{page++}}">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        
+    </script>
+
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 3.引入mui的js文件 -->
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/mui/js/mui.js"></script>
+    <!-- 4.引入zepto的js文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 5.引入模板引擎的js文件 -->
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../js/index.js"></script>
+
+    <script src="../js/save-money.js"></script>
+</body>
+
+</html>

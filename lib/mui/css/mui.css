@@ -393,7 +393,8 @@ a:active
 .mui-ellipsis
 {
     overflow: hidden;
-    white-space: normal;
+
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
@@ -422,6 +423,7 @@ a:active
 .mui-table-cell
 {
     position: relative;
+
     display: table-cell;
 }
 
@@ -586,6 +588,7 @@ p
 .mui-col-xs-1, .mui-col-sm-1, .mui-col-xs-2, .mui-col-sm-2, .mui-col-xs-3, .mui-col-sm-3, .mui-col-xs-4, .mui-col-sm-4, .mui-col-xs-5, .mui-col-sm-5, .mui-col-xs-6, .mui-col-sm-6, .mui-col-xs-7, .mui-col-sm-7, .mui-col-xs-8, .mui-col-sm-8, .mui-col-xs-9, .mui-col-sm-9, .mui-col-xs-10, .mui-col-sm-10, .mui-col-xs-11, .mui-col-sm-11, .mui-col-xs-12, .mui-col-sm-12
 {
     position: relative;
+
     min-height: 1px;
 }
 
@@ -723,7 +726,9 @@ p
     top: 0;
     bottom: 0;
     left: 0;
+
     overflow: hidden;
+
     width: 100%;
 }
 
@@ -1173,20 +1178,25 @@ button,
     font-size: 14px;
     font-weight: 400;
     line-height: 1.42;
+
     position: relative;
+
     display: inline-block;
+
     margin-bottom: 0;
     padding: 6px 12px;
+
     cursor: pointer;
     -webkit-transition: all;
-    transition: all;
+            transition: all;
     -webkit-transition-timing-function: linear;
-    transition-timing-function: linear;
+            transition-timing-function: linear;
     -webkit-transition-duration: .2s;
-    transition-duration: .2s;
+            transition-duration: .2s;
     text-align: center;
     vertical-align: top;
     white-space: nowrap;
+
     color: #333;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -2240,8 +2250,11 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
 .mui-table-view-cell
 {
     position: relative;
+
     overflow: hidden;
+
     padding: 11px 15px;
+
     -webkit-touch-callout: none;
 }
 .mui-table-view-cell:after
@@ -2853,15 +2866,19 @@ input[type='tel'],
 input[type='color']
 {
     line-height: 21px;
+
     width: 100%;
     height: 40px;
     margin-bottom: 15px;
     padding: 10px 15px;
+
     -webkit-user-select: text;
+
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 3px;
     outline: none;
     background-color: #fff;
+
     -webkit-appearance: none;
 }
 

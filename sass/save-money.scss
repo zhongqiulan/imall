@@ -1,0 +1,93 @@
+@import 'base.scss';
+@import 'normalize.min.scss';
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+#header {
+    background: #ff841d;
+    height: 44px;
+    width: 100%;
+    position: relative;
+    >h1 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 44px;
+    }
+}
+.mui-ellipsis{
+    color: #ff6c00;
+}
+#main {
+    >ul {
+        >li {
+            padding: 14px 8px;
+            position: relative;
+            >a {
+                // display: block;
+                text-decoration: none;
+                >img {
+                    width: 100px;
+                    height: 100px;
+                    max-width: 100px;
+                }
+                >div {
+                    padding-left: 90px;
+                    line-height: 24px;
+                    .title {
+                        font-size: 15px;
+                        color: #333333;
+                        line-height: 19px;
+                        min-height: 57px;
+                        text-align: left;
+                        font-weight: normal;
+                    }
+                    
+                    .other {
+                        margin-top: 8px;
+                        span.small {
+                            color: #a1a1a1;
+                            font-size: 12px;
+                            float: left;
+                        }
+                        span.comment {
+                            font-size: 12px;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.title {
+    font-size: 15px;
+    color: #333333;
+    word-break: break-all;
+    line-height: 19px;
+    min-height: 57px;
+    text-align: left;
+    font-weight: normal;
+}
+span.comment {
+    font-size: 12px;
+    float: right;
+}
+span.small {
+    color: #a1a1a1;
+    font-size: 12px;
+    float: left;
+}
+span.comment {
+    color: #a1a1a1;
+    font-size: 12px;
+    float: right;
+}
