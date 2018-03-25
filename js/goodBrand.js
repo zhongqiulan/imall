@@ -1,9 +1,9 @@
 var mmbuy;
+var id;
 $(function() {
     mmbuy = new MMBuy();
     mmbuy.initScroll();
-    mmbuy.getHotBrand();
-    mmbuy.setBrandId();
+    mmbuy.getBrand();
 })
 var MMBuy = function () {
 
@@ -23,19 +23,25 @@ MMBuy.prototype = {
         });
     },
     // 获取热门品牌数据
-    getHotBrand:function(){
+    getBrand:function(){
+        id = mmbuy.getQueryString('id');
         $.ajax({
-            url:"http://mmb.ittun.com/api/getbrandtitle",
+            url:"http://mmb.ittun.com/api/getbrand",
+            data:{
+                brandtitleid:id
+            },
             success:function(data){
-                var html = template("hotBrandTmp",data);
+                
+                var html = template("BrandTmp",data);
                 $('#main .brand-list >ul').html(html);
             }
         })
     },
-    setBrandId:function(){
-        $("#main .brand-list >ul").on('click',"#main .brand-list >ul>li",function(){
-            var id = $(this).data('id');
-            window.location.href = "file:///C:/Users/alice/Desktop/manmanbuy/html/goodBrand.html?id="+ id;
-        })
-    }
+       // 获取url中参数的值
+       getQueryString: function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return null;
+    },
 }

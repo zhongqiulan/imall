@@ -6,7 +6,7 @@
     <!-- 1.添加移动端的视口 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>慢慢买---手机端</title>
+    <title>慢慢买---手机端主页李浩</title>
     <!-- 2.引入站点图标 -->
     <!-- <link rel="icon" href="./images/favicon.ico"> -->
     <!-- 1.引包先引入第三方的包  如果有依赖要先引入依赖在引入不依赖 -->
@@ -16,17 +16,67 @@
     <!-- 2.引人mui的样式文件 -->
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./lib/mui/js/mui.js"></script>
 </head>
 
 <body>
     <!--先把页面的大结构划分好，每个大块最外层选择器尽量id选择器 id样式优先级高 方便覆盖一些框架的样式 可以更明显的区分代码的功能块  -->
- 
+    <!-- 头部区域  -->
+    <header id="header">
+        <a href="#" class="logo">
+            <img src="./images/header_logo.png" alt=""/>
+        </a>
+        <a href="#" class="download">
+            <img src="./images/header_app.png" alt="app下载"/>
+        </a>
+    </header>
+    <!-- 主体部分 -->
+    <main id="main">
+        <!-- 搜索的部分 -->
+        <section id="search">
+            <div class="search-text">
+                <input type="text" placeholder="请输入搜索的商品">
+            </div>
+            <div class="search-input">
+                <input type="text" value="搜索">
+            </div>
+        </section>
+        <!-- 轮播图的区域 -->
+        <section id="slide">
+
+        </section>
+        <!-- 买买热新闻区域 -->
+        <section id="banner">
+
+        </section>
+
+        <!-- 商品推荐 -->
+        <section id="recomment">
+
+        </section>
+    </main>
+    <!-- 底部区域 -->
+     <footer id="footer">
+        <div class="footer-nav">
+            <div class="mui-row">
+                <div class="mui-col-xs-4"><a href="#">登录</a></div>
+                <div class="mui-col-xs-4"><a href="#">注册</a></div>
+                <div class="mui-col-xs-4"><a href="#" class="fa fa-arrow-up ">返回顶部</a></div>
+                <div class="mui-col-xs-12 footer-content">
+                    <p class="title">
+                        <a href="#" class="app">手机app下载</a>
+                        <a href="#" class="icon">慢慢买手机版</a>
+                        <span> -- 掌上比价平台</span>
+                    </p>
+                    <p class="address">m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
  
     <!-- js在body结束标签的上面引入 -->
-    <!-- 3.引入mui的js文件 -->
-    <script src="./lib/mui/js/mui.js"></script>
     <!-- 4.引入zepto的js文件 -->
     <script src="./lib/zepto/zepto.min.js"></script>
     <!-- 5.引入模板引擎的js文件 -->

@@ -2,8 +2,7 @@ var mmbuy;
 $(function() {
     mmbuy = new MMBuy();
     mmbuy.initScroll();
-    mmbuy.getHotBrand();
-    mmbuy.setBrandId();
+    mmbuy.getProductCom();
 })
 var MMBuy = function () {
 
@@ -23,19 +22,17 @@ MMBuy.prototype = {
         });
     },
     // 获取热门品牌数据
-    getHotBrand:function(){
+    getProductCom:function(){
         $.ajax({
-            url:"http://mmb.ittun.com/api/getbrandtitle",
+            url:"http://mmb.ittun.com/api/getproductcom",
+            data:{
+                productid:1
+            },
             success:function(data){
-                var html = template("hotBrandTmp",data);
-                $('#main .brand-list >ul').html(html);
+                var html = template("commentTem",data);
+                $('#main .comment-list').html(html);
             }
         })
     },
-    setBrandId:function(){
-        $("#main .brand-list >ul").on('click',"#main .brand-list >ul>li",function(){
-            var id = $(this).data('id');
-            window.location.href = "file:///C:/Users/alice/Desktop/manmanbuy/html/goodBrand.html?id="+ id;
-        })
-    }
+    
 }

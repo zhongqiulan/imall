@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import 'base.scss';
+#main{
+    height: 750px;;
+    .link {
+        width: 300px;
+        margin: 10px auto;
+        float: none;
+        >a {
+            padding: 10px 8px;
+            background: #f4f4f4;
+            border: 1px solid #bfbfbf;
+            float: left;
+            margin: 0 0 5px 5px;
+        }
+    }
+}

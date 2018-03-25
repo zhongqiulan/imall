@@ -1,4 +1,12 @@
-@charset "utf-8"; 
-@import 'normalize.min.scss'; // 导入自己的base文件
 @import 'base.scss';
-@import './normalize.min.scss';
+#main{
+    #search{
+
+        height: 50px;
+        background-color: #fff;
+        .serach-text{
+            height: 30px;
+            
+        }
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买---手机端</title>
+    <link rel="stylesheet" href="../lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <script href="../lib/mui/js/mui.js"></script>
+    <link rel="stylesheet" href="../css/getsitenav.css">
+</head>
+
+<body>
+    <!-- 头部区域  -->
+    <header id="header">
+        <a href="#" class="logo">
+            <img src="../images/header_logo.png" alt="" />
+        </a>
+        <a href="#" class="download">
+            <img src="../images/header_app.png" alt="app下载" />
+        </a>
+    </header>
+    <!-- 主体部分 -->
+    <main id="main">
+        <div class="nav link">
+            <!-- <a href="http://union.click.jd.com/jdc?e=&amp;p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14MNyZgX0x9cXgyexkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i&amp;t=W1dCFBBFC14NXAAECUteDA%3D%3D"
+                target="_blank">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png">京东商城
+            </a> -->
+        </div>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="footer-nav">
+            <div class="mui-row">
+                <div class="mui-col-xs-4">
+                    <a href="#">登录</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="#">注册</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="#" class="fa fa-arrow-up ">返回顶部</a>
+                </div>
+                <div class="mui-col-xs-12 footer-content">
+                    <p class="title">
+                        <a href="#" class="app">手机app下载</a>
+                        <a href="#" class="icon">慢慢买手机版</a>
+                        <span> -- 掌上比价平台</span>
+                    </p>
+                    <p class="address">m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/html" id="navTmp">
+    {{each result as value i }}
+    <a href="{{value.navHref}}" target="_blank">
+        <img src="{{value.navImg}}">{{value.navTitle}}
+    </a>
+    {{/each}}
+</script>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<script src="../js/getsitenav.js"></script>
+
+</html>

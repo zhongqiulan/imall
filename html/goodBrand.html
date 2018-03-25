@@ -6,7 +6,7 @@
     <!-- 1.添加移动端的视口 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>慢慢买---钟秋兰-一</title>
+    <title>慢慢买---钟秋兰-二</title>
     <!-- 2.引入站点图标 -->
     <!-- <link rel="icon" href="./images/favicon.ico"> -->
     <!-- 1.引包先引入第三方的包  如果有依赖要先引入依赖在引入不依赖 -->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../lib/fa/css/font-awesome.css">
     <!-- 2.引人mui的样式文件 -->
     <link rel="stylesheet" href="../lib/mui/css/mui.css">
-    <link rel="stylesheet" href="../css/allBrand.css">
+    <link rel="stylesheet" href="../css/goodBrand.css">
     <script src="../lib/mui/js/mui.js"></script>
 </head>
 
@@ -24,6 +24,7 @@
     <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
             <!--这里放置真实显示的DOM内容-->
+
             <!-- 头部区域  -->
             <header id="header">
                 <a href="#" class="logo">
@@ -45,18 +46,29 @@
                     </li>
                     <li class="f-l">
                         <a href="#">品牌大全</a>
+                        <span class="sep">></span>
+                    </li>
+                    <li class="f-l">
+                        <a href="#">平板电视哪个牌子好</a>
                     </li>
                 </ul>
             </section>
             <!-- 主体部分 -->
             <main id="main">
                 <div class="brand-sort">
-                    热门品牌排行
+                    平板电视哪个牌子好
                 </div>
                 <div class="brand-list">
                     <ul class="mui-table-view">
-                        <!-- <li class="mui-table-view-cell">
-                            <a class="mui-navigate-right">Item 1</a>
+                        <!-- <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;" class="mui-navigate-right">
+                                <img class="mui-media-object mui-pull-left" src="../images/gengduo.png">
+                                <div class="mui-media-body">
+                                    幸福
+                                    <p class='mui-ellipsis'>30天全网销量：
+                                        <span>789999</span>件</p>
+                                </div>
+                            </a>
                         </li> -->
 
                     </ul>
@@ -89,14 +101,16 @@
         </div>
     </div>
 
-
-
-
-
-    <script type="text/html" id="hotBrandTmp">
+    <script type="text/html" id="BrandTmp">
         {{each result as value i}}
-        <li class="mui-table-view-cell" data-id="{{value.brandTitleId}}">
-            <a class="mui-navigate-right">{{value.brandTitle}}</a>
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;" class="mui-navigate-right">
+                <img class="mui-media-object mui-pull-left" src="../images/gengduo.png">
+                <div class="mui-media-body">
+                    {{value.brandName}}
+                    <p class='mui-ellipsis'>{{value.brandInfo}}</p>
+                </div>
+            </a>
         </li>
         {{/each}}
     </script>
@@ -105,7 +119,7 @@
     <script src="../lib/zepto/zepto.min.js"></script>
     <!-- 5.引入模板引擎的js文件 -->
     <script src="../lib/artTemplate/template.js"></script>
-    <script src="../js/allBrand.js"></script>
+    <script src="../js/goodBrand.js"></script>
 
 </body>
 
