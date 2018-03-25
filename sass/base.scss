@@ -68,3 +68,84 @@ input {
     background: url('../img/03.loading/loading.gif')no-repeat center /changeSize(60rem) changeSize(60rem);
     bottom: changeSize(-120rem);
 }
+// 头部区域公共的样式 
+$main-color:#ff9000;
+$color:#ff841d;
+a,a:visited{
+text-decoration: none;
+}
+#header{
+  background: #ff841d;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+  .logo{
+    height: 34px;
+    float: left;
+    display: block;
+    padding:12px;
+    >img{
+      max-height: 25px;
+    }
+  }
+  .download{
+    float: right;
+    height: 34px;
+    padding:12px;
+    >img{
+      max-height: 34px;
+    }
+  }
+}
+// 底部区域的公共样式
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .footer-nav {
+        .mui-row {
+            .mui-col-xs-4 {
+                >a {
+                    font-size: 14px;
+                    color: #5a5a5a;
+                    display: block;
+                    text-align: center;
+                    line-height: 34px;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
+                    margin-right: -1px;
+                    >img {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-content {
+        text-align: center;
+        border: 1px solid #ccc;
+        border-top: none;
+        padding: 10px 0px;
+        .title {
+            margin: 0;
+            .app{
+                font-size: 12px;
+                color: red;
+            }
+            .icon{
+                font-size: 12px;
+                color: #5a5a5a;
+            }
+            span{
+                font-size: 12px;
+                color: #5a5a5a;
+            }
+        }
+        .address {
+            font-size: 12px;
+            color: #5a5a5a;
+            margin: 0;
+        }
+    }
+}
