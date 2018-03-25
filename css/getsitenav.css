@@ -120,4 +120,17 @@ body {
       color: #5a5a5a;
       margin: 0; }
 
-/*# sourceMappingURL=base.css.map */
+#main {
+  height: 750px; }
+  #main .link {
+    width: 300px;
+    margin: 10px auto;
+    float: none; }
+    #main .link > a {
+      padding: 10px 8px;
+      background: #f4f4f4;
+      border: 1px solid #bfbfbf;
+      float: left;
+      margin: 0 0 5px 5px; }
+
+/*# sourceMappingURL=getsitenav.css.map */
