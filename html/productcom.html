@@ -6,7 +6,7 @@
     <!-- 1.添加移动端的视口 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>慢慢买---钟秋兰-一</title>
+    <title>慢慢买---钟秋兰-四</title>
     <!-- 2.引入站点图标 -->
     <!-- <link rel="icon" href="./images/favicon.ico"> -->
     <!-- 1.引包先引入第三方的包  如果有依赖要先引入依赖在引入不依赖 -->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../lib/fa/css/font-awesome.css">
     <!-- 2.引人mui的样式文件 -->
     <link rel="stylesheet" href="../lib/mui/css/mui.css">
-    <link rel="stylesheet" href="../css/allBrand.css">
+    <link rel="stylesheet" href="../css/productcom.css">
     <script src="../lib/mui/js/mui.js"></script>
 </head>
 
@@ -24,6 +24,7 @@
     <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
             <!--这里放置真实显示的DOM内容-->
+
             <!-- 头部区域  -->
             <header id="header">
                 <a href="#" class="logo">
@@ -44,23 +45,50 @@
                         <span class="sep">></span>
                     </li>
                     <li class="f-l">
-                        <a href="#">品牌大全</a>
+                        <a href="#">平板电视</a>
+                        <span class="sep">></span>
+                    </li>
+                    <li class="f-l">
+                        <a href="#">
+                            夏普 40SF466A</a>
                     </li>
                 </ul>
             </section>
             <!-- 主体部分 -->
             <main id="main">
-                <div class="brand-sort">
-                    热门品牌排行
+                <div class="mui-card">
+                    <div class="mui-card-header mui-card-media" style="height:40vw;background-image:url('../images/ic_bcj.png')"></div>
+                    <div class="mui-card-content">
+                        <div class="mui-card-content-inner">
+                            <p style="color:#333;">这里显示文章摘要，让读者对文章内容有个粗略的概念...</p>
+                        </div>
+                    </div>
+                    <div class="mui-card-footer">
+                        <a class="mui-card-link">当前最低:
+                            <span>￥1789.1</span>
+                        </a>
+                        <a class="mui-card-link">优选评论:
+                            <span>2345条</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="brand-list">
-                    <ul class="mui-table-view">
-                        <!-- <li class="mui-table-view-cell">
-                            <a class="mui-navigate-right">Item 1</a>
-                        </li> -->
-
+                <div class="comment-tab">
+                    <ul>
+                        <li>
+                            <a href="#">比价购买</a>
+                        </li>
+                        <li>
+                            <a href="#">比较购买</a>
+                        </li>
+                        <li>
+                            <a href="#">比较购买</a>
+                        </li>
                     </ul>
                 </div>
+                <div class="comment-list">
+                   
+                </div>
+
             </main>
             <!-- 底部区域 -->
             <footer id="footer">
@@ -89,23 +117,27 @@
         </div>
     </div>
 
-
-
-
-
-    <script type="text/html" id="hotBrandTmp">
+    <script type="text/html" id="commentTem">
         {{each result as value i}}
-        <li class="mui-table-view-cell" data-id="{{value.brandTitleId}}">
-            <a class="mui-navigate-right">{{value.brandTitle}}</a>
-        </li>
+        <ul class="com-first clearfix">
+            <li class="f-l">{{value.comName}}</li>
+            <li class="f-r">{{value.comTime}}</li>
+        </ul>
+        <ul class="com-second clearfix">
+            <li class="f-l">xingxing</li>
+            <li class="f-r">{{value.comFrom}}</li>
+        </ul>
+        <p class="content">{{value.comContent}}</p>
+        <a href="#">回复</a>
         {{/each}}
     </script>
+    
     <!-- js在body结束标签的上面引入 -->
     <!-- 4.引入zepto的js文件 -->
     <script src="../lib/zepto/zepto.min.js"></script>
     <!-- 5.引入模板引擎的js文件 -->
     <script src="../lib/artTemplate/template.js"></script>
-    <script src="../js/allBrand.js"></script>
+    <script src="../js/productcom.js"></script>
 
 </body>
 
