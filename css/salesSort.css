@@ -308,7 +308,6 @@ body {
     border: none; }
 
 .tv {
-  padding: 10px;
   background-color: #f2f2f2; }
   .tv .tv-title > h1 {
     font-size: 18px;
@@ -332,17 +331,30 @@ body {
 
 .container {
   height: 100%; }
-  .container #slide .mui-slider-group .mui-media-body {
-    color: #333;
-    font-style: 15px;
-    height: 56px; }
+  .container .mui-table-view .mui-media-object {
+    max-height: 120px;
+    max-width: 120px; }
+  .container .mui-slider .mui-slider-group .mui-slider-item img {
+    height: 300px !important; }
+  .container .section {
+    font-size: 15px;
+    color: #333; }
+  .container .price {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    color: red; }
+    .container .price .nprice {
+      font-size: 18px; }
+  .container .base {
+    font-size: 10px;
+    color: #a1a1a1; }
 
 #footer {
   position: static; }
 
 .mui-control-content {
   background-color: white;
-  min-height: 500px; }
+  min-height: 600px; }
 
 .mui-control-content .mui-loading {
   margin-top: 50px; }

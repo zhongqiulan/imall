@@ -1,9 +1,11 @@
 var mmbuy;
+var productid;
 $(function () {
     mmbuy = new MMBuy();
     mmbuy.initScroll();
     mmbuy.initTab();
     mmbuy.getProductList();
+    
 })
 var MMBuy = function () {
 
@@ -27,15 +29,17 @@ MMBuy.prototype = {
         $.ajax({
             url: "http://mmb.ittun.com/api/getbrandproductlist",
             data: {
-                brandtitleid: 2
+                // brandtitleid: mmbuy.getQueryString("brandtitleid")
+                brandtitleid: 1
             },
             success: function (data) {
                 console.log(data);
-                // var html = template("commentTem", data);
-                // $('#main .comment-list').html(html);
+                var html = template("productListTmp", data);
+                $('.container .mui-table-view').html(html);
+                mmbuy.getProductId();
             }
         })
-    },
+    },  
     // 初始化选项卡
     initTab: function () {
         mui.init({
@@ -73,6 +77,19 @@ MMBuy.prototype = {
                 }
             });
         })(mui);
+    },
+    // 获取url中参数的值
+    getQueryString: function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return null;
+    },
+    // 设置跳转页面id
+    getProductId:function(){
+        $(".baseid").click(function(){
+            productid = $(this).data('productid');
+            window.location.href = "file:///C:/Users/alice/Desktop/manmanbuy/html/productcom.html?productid="+productid;
+        })
     }
-    
 }

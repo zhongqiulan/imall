@@ -23,16 +23,25 @@ MMBuy.prototype = {
     },
     // 获取热门品牌数据
     getProductCom:function(){
+        productid = mmbuy.getQueryString('productid');
+        
         $.ajax({
             url:"http://mmb.ittun.com/api/getproductcom",
             data:{
-                productid:1
+                productid:productid
             },
             success:function(data){
                 var html = template("commentTem",data);
                 $('#main .comment-list').html(html);
             }
         })
+    },
+     // 获取url中参数的值
+     getQueryString: function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return null;
     },
     
 }
