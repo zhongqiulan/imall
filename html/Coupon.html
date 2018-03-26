@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/Coupon.css">
+
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../js/Coupon.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    </head>
+
+    <body>
+        <div id="ctl00_headerApp" class="head">
+            <div class="back">
+                <a href="../index.html" class="icon-back">
+                    <i class="fa fa-angle-left fa-2x" aria-hidden="true">
+
+                    </i>
+                </a>
+            </div>
+            <h1>
+                优惠券
+            </h1>
+            <div class="home">
+                <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+            </div>
+        </div>
+
+        <div class="quan-box">
+            <div class="quan-model">
+
+                <div class="bd clearfix">
+                    <ul>
+                        <li>
+                            <a href="./kfc KFC Coupon.html">
+                                <img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt="肯德基优惠券">
+                                <br>肯德基</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="ctl00_Menu" class="nav" style="margin-top:20px;">
+            <a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+
+            <a href="quanindex.aspx">优惠券</a>
+        </div>
+        <div id="ctl00_footerApp">
+            <div class="foot_top">
+
+                <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                <a href="reg.aspx">注册</a>
+                <a href="#" style="width: 40%; border: 0;">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" />返回顶部</a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">
+                        慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+
+                    <!-- <img src="http://c.cnzz.com/wapstat.php?siteid=1256699064&r=http%3a%2f%2fm.manmanbuy.com%2f&rnd=699862491" width="0" height="0" -->
+                    <!-- /> -->
+
+                </p>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <script type="text/html" id="navTmp">
+            {{each result as value i}}
+            <li>
+                <a href="./kfc KFC Coupon.html">
+                    <img src="{{value.couponImg}}" alt="肯德基优惠券">
+                    <br>{{value.couponTitle}}</a>
+            </li>
+            {{/each}}
+
+          
+
+        </script>
+        <script type="text/javascript">
+            document.write(
+                '<div id="appLoad" style="position:fixed;right:0;bottom:30px;z-index:999"><a href="http://m.manmanbuy.com/?o=download"><img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" width="60"></a></div>'
+            );
+        </script>
+        <script src="../lib/artTemplate/template.js"></script>
+    </body>
+
+</html>

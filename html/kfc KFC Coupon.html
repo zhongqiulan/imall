@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/kfc KFC Coupon.css">
+
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    </head>
+
+    <body>
+        <div id="ctl00_headerApp" class="head">
+            <div class="back">
+                <a href="../html/Coupon.html" class="icon-back">
+                    <i class="fa fa-angle-left fa-2x" aria-hidden="true">
+
+                    </i>
+                </a>
+            </div>
+            <h1>
+                肯德基优惠券
+            </h1>
+            <div class="home">
+                <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+            </div>
+        </div>
+        <div>
+            <div style="font-size:12px; text-align:center; color:#999; margin:8px 0px;">
+                --点餐前出示手机中的优惠券，即可享受优惠--
+            </div>
+            <div class="quan-box">
+                <div id="ctl00_ContentBody_quanlist" class="quan-list" data-gallery="one">
+                    <ul>
+                        <li>
+                            <a href="http://d3.5ikfc.com/static/thumbs/1217/kfc-5ikfc-121_p16.jpg" title=" 分享双人餐  新奥尔良烤鸡腿堡+香辣鸡腿堡+新奥尔良烤翅+薯条(大)+百事可乐(中)+雪顶咖啡 2018年3月凭肯德基优惠券">
+                                <div class="pic">
+                                    <img src="http://d3.5ikfc.com/static/thumbs/1217/kfc-5ikfc-121_p16.jpg" alt=" 分享双人餐  新奥尔良烤鸡腿堡+香辣鸡腿堡+新奥尔良烤翅+薯条(大)+百事可乐(中)+雪顶咖啡 2018年3月凭肯德基优惠券">
+                                </div>
+                                <div class="info">
+                                    <div class="tit">
+                                        <h3>C12 分享双人餐 新奥尔良烤鸡腿堡+香辣鸡腿堡+新奥尔良烤翅+薯条(大)+百事可乐(中)+雪顶咖啡 2018年3月凭肯德基优惠券</h3>
+                                        <h2>
+                                            <em>￥</em> 65</h2>
+                                    </div>
+                                    <div class="time">有效期至3月31日</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+            <div id="ctl00_Menu" class="nav" style="margin-top:20px;">
+                <a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+
+                <a href="./Coupon.html">优惠券</a>
+            </div>
+            <div id="ctl00_footerApp">
+                <div class="foot_top">
+
+                    <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                    <a href="reg.aspx">注册</a>
+                    <a href="#" style="width: 40%; border: 0;">
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" />返回顶部</a>
+                </div>
+                <div class="footer">
+                    <p>
+                        <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a>
+                        <a href="http://m.manmanbuy.com">
+                            慢慢买手机版</a> -- 掌上比价平台</p>
+                    <p>
+                        m.manmanbuy.com
+
+                        <!-- <img src="http://c.cnzz.com/wapstat.php?siteid=1256699064&r=http%3a%2f%2fm.manmanbuy.com%2f&rnd=699862491" width="0" height="0" -->
+                        <!-- /> -->
+
+                    </p>
+                </div>
+           
+
+        <script type="text/html" id="navyou">
+            {{each result as value i}}
+            <li>
+                <a href="http://d3.5ikfc.com/static/thumbs/1217/kfc-5ikfc-121_p16.jpg" title=" 分享双人餐  新奥尔良烤鸡腿堡+香辣鸡腿堡+新奥尔良烤翅+薯条(大)+百事可乐(中)+雪顶咖啡 2018年3月凭肯德基优惠券">
+                    <div class="pic">
+                        {{#value.couponProductImg}}
+                    </div>
+                    <div class="info">
+                        <div class="tit">
+                            <h3>{{value.couponProductName}}</h3>
+                            <h2>
+                                <!-- <em>￥</em>-->
+                                    {{value.couponProductPrice}}</h2> 
+                        </div>
+                        <div class="time">{{value.couponProductTime}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </script>
+            <script type="text/javascript">
+                document.write(
+                    '<div id="appLoad" style="position:fixed;right:0;bottom:30px;z-index:999"><a href="http://m.manmanbuy.com/?o=download"><img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" width="60"></a></div>'
+                );
+            </script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../js/kfc KFC Coupon.js"></script>
+    </body>
+
+</html>
